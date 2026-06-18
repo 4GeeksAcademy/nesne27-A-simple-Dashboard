@@ -1,0 +1,43 @@
+@theme {
+  --color-ink: #0f172a;
+  --color-soft: #f8fafc;
+  --color-line: #e2e8f0;
+  --color-brand: #0f766e;
+  --color-accent: #0ea5e9;
+  --color-success: #15803d;
+  --color-warn: #b45309;
+
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .text-brand {
+    color: var(--color-brand);
+  }
+
+  .border-brand {
+    border-color: var(--color-brand);
+  }
+
+  .focus\:border-brand:focus {
+    border-color: var(--color-brand);
+  }
+
+  select {
+    appearance: none;
+  }
+}
